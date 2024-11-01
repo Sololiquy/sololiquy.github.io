@@ -1,0 +1,79 @@
+.background {
+    @apply fixed top-0 left-0 w-screen h-screen bg-cover filter blur-lg transition duration-300 ease-in-out brightness-75 -z-10;
+
+    background-image: url("/BG_home.png");
+}
+.backgroundHover {
+    @apply transition duration-300 delay-300 ease-in-out brightness-50;
+}
+
+.container {
+    @apply relative flex w-screen h-screen place-content-center place-items-center overflow-hidden;
+}
+
+.outlineCircleSpinning {
+    @apply absolute rounded-full outline-dotted outline-8 grow-0 shrink-0 w-[136vh] h-[136vh];
+
+    background-color: rgba(255, 255, 255, 0);
+    outline-color: rgba(255, 255, 255, 0.789);
+
+    animation: spin 80s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circleBorder {
+    @apply absolute flex justify-center items-center rounded-full grow-0 w-[132vh] h-[132vh] transition duration-150 ease-in-out;
+
+    background-color: hsla(0, 0%, 16%, 0.7);
+}
+.circleBorderHover {
+    @apply transition duration-150 ease-in-out;
+}
+
+.circleCentered {
+    @apply relative flex justify-center items-center rounded-full grow-0 shrink-0 w-[130vh] h-[130vh] overflow-hidden;
+}
+
+.buttonPrevious {
+    @apply absolute w-9 h-9 rotate-180 left-2;
+
+    color: black;
+}
+.buttonNext {
+    @apply absolute w-9 h-9 right-2;
+
+    color: black;
+}
+.arrowImg {
+    @apply invert animate-bounce;
+
+    animation: bounceArrow 1s infinite;
+}
+@keyframes bounceArrow {
+    0%,
+    100% {
+        transform: translateX(-5%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: translateX(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+.test {
+    @apply absolute inset-0 flex items-center justify-center;
+    pointer-events: none;
+}
+
+.activeCon {
+    opacity: 1;
+    pointer-events: auto;
+}

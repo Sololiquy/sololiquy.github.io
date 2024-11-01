@@ -1,0 +1,19 @@
+.clock {
+    @apply flex flex-col;
+    font-family: "AAAAA";
+}
+
+.clockHour {
+    @apply text-5xl self-end;
+}
+.clockMinute {
+    @apply text-5xl self-end;
+}
+.clockSecond {
+    @apply self-end;
+}
+
+@font-face {
+    font-family: "AAAAA";
+    src: url("/font/good_times_rg.otf") format("opentype");
+}

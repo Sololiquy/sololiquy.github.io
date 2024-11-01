@@ -1,0 +1,22 @@
+.backgroundCircle {
+    @apply w-[145vh] h-[145vh] bg-cover;
+
+    background-image: url("/BG_home.png");
+}
+
+.containerClock {
+    @apply absolute translate-y-[-30vh];
+}
+
+.containerLinkProfile {
+    @apply absolute h-[80px] flex flex-row items-end gap-x-2 transition-[column-gap] duration-100 ease-linear;
+}
+.containerLinkProfileHoverLogo {
+    @apply gap-x-3 transition-all duration-100 ease-linear;
+}
+.logo {
+    @apply size-[60px] rounded-full transition-all duration-100 ease-linear;
+}
+.logoHover {
+    @apply size-[75px] transition-all duration-100 ease-linear;
+}
