@@ -37,7 +37,7 @@ const Home = ({
                 onMouseEnter={() => setHoveredElements([true, ""])}
                 onMouseLeave={() => setHoveredElements([false, ""])}
             >
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Sololiquy" target="_blank" rel="noopener noreferrer">
                     <img
                         className={`${styles.logo} ${hoveredElements[0] && hoveredElements[1] == "#ffffffb3" ? styles.logoHover : ""}`}
                         src="/github_logo.svg"
