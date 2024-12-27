@@ -1,0 +1,22 @@
+.container {
+    @apply size-40 p-3 rounded-xl absolute flex;
+    /* background-color: rgb(39, 39, 39); */
+    animation: moveRight 12s linear forwards;
+}
+.containerHover {
+    @apply size-44;
+    background-color: rgb(39, 39, 39);
+}
+
+.imgContainer {
+    @apply object-contain;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(200vh);
+    }
+}

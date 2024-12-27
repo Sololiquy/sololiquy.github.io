@@ -1,0 +1,16 @@
+.backgroundCircle {
+    @apply absolute w-full h-full;
+    background: radial-gradient(circle, rgb(65, 65, 65) 10%, rgb(59, 59, 59) 69.5%, rgb(20, 251, 255) 73%);
+}
+
+.container {
+    @apply absolute w-full h-full flex justify-center items-center;
+}
+
+.cardContainer {
+    @apply w-[180vh] h-52 absolute flex items-center;
+}
+
+.nameCard {
+    @apply bottom-[150px] absolute flex;
+}

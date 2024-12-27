@@ -1,23 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import Clock from "./components/clock";
 import styles from "./home.module.css";
 
-const Home = ({
-    backgroundPositionX,
-    backgroundPositionY,
-    profileLinkPositionX,
-    hoveredElements,
-    setHoveredElements,
-}: {
-    backgroundPositionX: string;
-    backgroundPositionY: string;
-    profileLinkPositionX: string;
-    hoveredElements: [boolean, string];
-    setHoveredElements: React.Dispatch<React.SetStateAction<[boolean, string]>>;
-}) => {
+const Home = ({ backgroundPositionX, backgroundPositionY, profileLinkPositionX, hoveredElements, setHoveredElements }: propType) => {
     return (
         <>
             <div
@@ -27,7 +15,7 @@ const Home = ({
                 onMouseLeave={() => setHoveredElements([false, ""])}
             ></div>
 
-            <div className={styles.containerClock}>
+            <div className={styles.containerClock} onMouseEnter={() => setHoveredElements([true, ""])}>
                 <Clock />
             </div>
 
@@ -68,5 +56,13 @@ const Home = ({
         </>
     );
 };
+
+interface propType {
+    backgroundPositionX: string;
+    backgroundPositionY: string;
+    profileLinkPositionX: string;
+    hoveredElements: [boolean, string];
+    setHoveredElements: Dispatch<SetStateAction<[boolean, string]>>;
+}
 
 export default Home;

@@ -103,7 +103,7 @@ export default function Home() {
                 <div className={styles.circleCentered}>
                     {carouselPages.map((page, index) => (
                         <div
-                            key={index}
+                            key={"car" + index}
                             className={`${styles.test} ${index === carouselIndex ? styles.activeCon : ""}`}
                             style={{
                                 opacity: index === carouselIndex ? 1 : 0,

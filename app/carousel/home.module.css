@@ -5,7 +5,7 @@
 }
 
 .containerClock {
-    @apply absolute translate-y-[-30vh];
+    @apply absolute translate-y-[-30vh] select-none;
 }
 
 .containerLinkProfile {
