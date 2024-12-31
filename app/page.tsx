@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import styles from "./home.module.css";
+import styles from "./main.module.css";
 import HomeCarousel from "./carousel/home";
 import SkillsetCarousel from "./carousel/skillset";
+import RoadmapCarousel from "./carousel/roadmap";
 import AboutCarousel from "./carousel/about";
 
 export default function Home() {
@@ -75,7 +76,22 @@ export default function Home() {
             hoveredElements={hoveredElements}
             setHoveredElements={setHoveredElements}
         />,
-        <AboutCarousel key="page-3" />,
+        <RoadmapCarousel
+            key="page-3"
+            backgroundPositionX={backgroundPosition.x}
+            backgroundPositionY={backgroundPosition.y}
+            profileLinkPositionX={profileLinkPositionX}
+            hoveredElements={hoveredElements}
+            setHoveredElements={setHoveredElements}
+        />,
+        <AboutCarousel
+            key="page-4"
+            backgroundPositionX={backgroundPosition.x}
+            backgroundPositionY={backgroundPosition.y}
+            profileLinkPositionX={profileLinkPositionX}
+            hoveredElements={hoveredElements}
+            setHoveredElements={setHoveredElements}
+        />,
     ];
 
     const handleNext = () => {

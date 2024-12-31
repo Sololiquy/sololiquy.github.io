@@ -8,18 +8,17 @@ import styles from "./skillset.module.css";
 
 const Skillset = ({ backgroundPositionX, backgroundPositionY, profileLinkPositionX, hoveredElements, setHoveredElements }: propType) => {
     const [cards, setCards] = useState<JSX.Element[]>([]);
-    const [nameCard, setNameCard] = useState("");
-    const images = ["/Tailwind.png", "/React.png", "/PHP.png", "/HTML.png", "/CSS.png", "/Javascript.png", "/Typescript.png", "/Java.png", "/MySQL.png"];
+    const [nameCard, setNameCard] = useState<string>("");
+    const programs = ["Tailwind", "React", "PHP", "HTML", "CSS", "Javascript", "Typescript", "Java", "MySQL"];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setCards((prevCards) => {
-                const newCards = [...prevCards, <LogoCard key={Date.now()} imgSource={images[currentImageIndex]} nameCard={nameCard} setNameCard={setNameCard} />];
-                return newCards;
+                return [...prevCards, <LogoCard key={Date.now()} programs={programs[currentImageIndex]} nameCard={nameCard} setNameCard={setNameCard} />];
             });
 
-            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % programs.length);
 
             setTimeout(() => {
                 setCards((prevCards) => prevCards.slice(1));
@@ -31,12 +30,14 @@ const Skillset = ({ backgroundPositionX, backgroundPositionY, profileLinkPositio
 
     return (
         <>
-            <div className={styles.backgroundCircle}></div>
-            <div className={styles.container}>
+            <div className={styles.backgroundCircle} onMouseEnter={() => setHoveredElements([true, ""])} onMouseLeave={() => setHoveredElements([false, ""])}></div>
+            <div className={styles.container} onMouseEnter={() => setHoveredElements([true, ""])} onMouseLeave={() => setHoveredElements([false, ""])}>
                 <div className={styles.cardContainer}>{cards}</div>
-                {/* <LogoCard imgSource={images[1]} nameCard={nameCard} setNameCard={setNameCard} /> */}
+                <div className="bottom-[180px] absolute flex flex-col items-center">
+                    <div className={styles.nameCard}>{nameCard}</div>
+                    <div>aaa</div>
+                </div>
             </div>
-            <div className={styles.nameCard}>{nameCard}</div>
         </>
     );
 };

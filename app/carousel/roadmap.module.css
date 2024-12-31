@@ -1,0 +1,39 @@
+.backgroundCircle {
+    @apply absolute w-full h-full;
+    background: radial-gradient(circle, rgb(65, 65, 65) 10%, rgb(59, 59, 59) 69.5%, rgb(20, 106, 255) 73%);
+}
+
+.container {
+    @apply absolute w-full h-full flex justify-center items-center;
+}
+
+.containerScroll {
+    @apply w-full h-screen relative overflow-y-auto scroll-smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.containerScroll::-webkit-scrollbar {
+    display: none;
+}
+
+.roadmapContainer {
+    @apply w-full pb-[50%] pt-[30%] relative flex flex-row items-end justify-center place-content-end;
+}
+
+.verticalLine {
+    @apply w-1.5 h-full relative justify-self-center;
+    background-color: rgb(255, 255, 255);
+}
+
+.donut {
+    @apply size-10 rounded-full absolute;
+    border: 6px solid rgb(255, 255, 255);
+}
+.donutAnimated {
+    @apply size-10 rounded-full absolute animate-ping;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.content {
+    @apply w-auto h-auto gap-[100px] relative flex flex-col-reverse items-center;
+}

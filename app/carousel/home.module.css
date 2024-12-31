@@ -18,5 +18,5 @@
     @apply size-[60px] rounded-full transition-all duration-100 ease-linear;
 }
 .logoHover {
-    @apply size-[75px] transition-all duration-100 ease-linear;
+    @apply size-[70px] transition-all duration-100 ease-linear;
 }

@@ -1,0 +1,28 @@
+.container {
+    @apply w-auto max-w-[70vh] h-auto gap-1 p-1 shrink-0 relative flex flex-col;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.name {
+    @apply p-1 text-white text-2xl font-bold italic;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    @apply p-1 text-white text-base;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.date {
+    @apply pb-1 pl-1 pr-1 text-[#ffffff56] text-xs italic flex justify-end;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.programLogo {
+    @apply h-10 gap-1 p-1 flex justify-end;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.imgLogo {
+    @apply size-9 object-contain;
+}

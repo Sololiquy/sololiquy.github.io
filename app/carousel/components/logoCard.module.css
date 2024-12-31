@@ -1,5 +1,5 @@
 .container {
-    @apply size-40 p-3 rounded-xl absolute flex;
+    @apply size-40 p-3 rounded-xl absolute flex justify-center items-center;
     /* background-color: rgb(39, 39, 39); */
     animation: moveRight 12s linear forwards;
 }
