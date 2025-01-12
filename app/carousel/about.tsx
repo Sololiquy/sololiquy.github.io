@@ -13,11 +13,9 @@ const About = ({ backgroundPositionX, backgroundPositionY, profileLinkPositionX,
             <div className={styles.content} onMouseEnter={() => setHoveredElements([true, ""])} onMouseLeave={() => setHoveredElements([false, ""])}>
                 <div className={styles.containerScroll}>
                     <div className={styles.aboutMeContainer}>
-                        <div className="text-2xl px-2">about me?</div>
-                        <hr className="w-[300px] ml-[50px] my-1" />
-                        <div className="ml-[50px]">An Artist in draw illustration</div>
-                        <div className="flex justify-center">Also</div>
-                        <div className="ml-[150px]">A Frontend Engineering (mostly on web)</div>
+                        <div className="text-2xl px-2">Name is Alfath Aditya Putra</div>
+                        <hr className="w-[300px] my-1" />
+                        <div className="max-w-[600px] text-center">I am A Frontend Web Engineering from Sriwijaya University and also an illustrator (for my hobby)</div>
                     </div>
                     <div className={styles.educationContainer}>
                         <div className="text-3xl px-16 flex justify-center">Education</div>

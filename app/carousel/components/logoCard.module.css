@@ -7,6 +7,9 @@
     @apply size-44;
     background-color: rgb(39, 39, 39);
 }
+.container:hover {
+    background-color: rgb(39, 39, 39);
+}
 
 .imgContainer {
     @apply object-contain;

@@ -45,11 +45,16 @@ const Roadmap = ({ backgroundPositionX, backgroundPositionY, profileLinkPosition
             <div className={styles.container} onMouseEnter={() => setHoveredElements([true, ""])} onMouseLeave={() => setHoveredElements([false, ""])}>
                 <div className={styles.containerScroll} ref={roadmapContainer}>
                     <div className={styles.roadmapContainer}>
-                        <div className="h-[65%] translate-y-[12vh] absolute">
+                        <div className="h-[75%] translate-y-[12vh] absolute">
+                            <div className="relative flex justify-center">
+                                <div className={styles.dotText}>NOW...</div>
+                                <div className={styles.dotCircle}></div>
+                                <div className={styles.ripple}></div>
+                            </div>
                             <div className={styles.verticalLine}></div>
                             <div className="relative flex justify-center">
-                                <div className={styles.donut}></div>
-                                <div className={styles.donutAnimated}></div>
+                                <div className={styles.horizontalLine}></div>
+                                <div className={styles.triangle}></div>
                             </div>
                         </div>
                         <div className={styles.content}>

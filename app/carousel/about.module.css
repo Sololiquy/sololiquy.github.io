@@ -17,7 +17,7 @@
 }
 
 .aboutMeContainer {
-    @apply p-2 relative flex flex-col font-mono;
+    @apply p-2 relative flex flex-col font-mono justify-center items-center;
     background-color: rgba(0, 0, 0, 0.2);
 }
 

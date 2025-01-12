@@ -17,7 +17,7 @@
 }
 
 .roadmapContainer {
-    @apply w-full pb-[50%] pt-[30%] relative flex flex-row items-end justify-center place-content-end;
+    @apply w-full pb-[40%] pt-[20%] relative flex flex-row items-end justify-center place-content-end;
 }
 
 .verticalLine {
@@ -25,15 +25,42 @@
     background-color: rgb(255, 255, 255);
 }
 
-.donut {
-    @apply size-10 rounded-full absolute;
-    border: 6px solid rgb(255, 255, 255);
+.dotText {
+    @apply -translate-y-7 text-sm italic absolute;
 }
-.donutAnimated {
-    @apply size-10 rounded-full absolute animate-ping;
+
+.dotCircle {
+    @apply size-5 rounded-full absolute;
+    background-color: rgb(255, 255, 255);
+}
+.ripple {
+    @apply size-5 rounded-full absolute animate-ping;
     border: 2px solid rgb(255, 255, 255);
 }
 
+.triangle {
+    @apply bottom-1 absolute;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1.5rem solid white;
+}
+
+.horizontalLine {
+    @apply w-screen h-1 bottom-1 relative;
+    border-width: 2px;
+    border-style: solid;
+    border-image: repeating-linear-gradient(90deg, rgb(255, 255, 255) 0, rgb(255, 255, 255) 10px, transparent 10px, transparent 20px) 1;
+    animation: headline 0.5s linear infinite;
+}
+@keyframes headline {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
 .content {
-    @apply w-auto h-auto gap-[100px] relative flex flex-col-reverse items-center;
+    @apply w-auto h-auto gap-[50px] relative flex flex-col-reverse items-center;
 }

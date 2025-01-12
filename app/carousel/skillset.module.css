@@ -16,6 +16,19 @@
     font-family: "Cascadia";
 }
 
+.expContainer {
+    @apply gap-3 flex flex-row justify-center items-center;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+}
+
+.blockIndicatorEmpty {
+    @apply w-5 h-2 rounded-2xl;
+    border: 1px solid rgb(255, 255, 255);
+}
+.blockIndicatorFull {
+    background-color: white;
+}
+
 @font-face {
     font-family: "Cascadia";
     src: url("/font/Cascadia.ttf") format("opentype");
