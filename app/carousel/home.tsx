@@ -34,7 +34,7 @@ const Home = ({ backgroundPositionX, backgroundPositionY, profileLinkPositionX, 
                         onMouseLeave={() => setHoveredElements([true, ""])}
                     />
                 </a>
-                <a href="https://osu.ppy.sh/users/4350087" target="_blank" rel="noopener noreferrer">
+                <a href="#" target="_blank" rel="noopener noreferrer">
                     <img
                         className={`${styles.logo} ${hoveredElements[0] && hoveredElements[1] == "#ff66abb3" ? styles.logoHover : ""}`}
                         src="/osu_logo.svg"
@@ -43,7 +43,7 @@ const Home = ({ backgroundPositionX, backgroundPositionY, profileLinkPositionX, 
                         onMouseLeave={() => setHoveredElements([true, ""])}
                     />
                 </a>
-                <a href="https://www.pixiv.net/users/39623345" target="_blank" rel="noopener noreferrer">
+                <a href="#" target="_blank" rel="noopener noreferrer">
                     <img
                         className={`${styles.logo} ${hoveredElements[0] && hoveredElements[1] == "#009dffb3" ? styles.logoHover : ""}`}
                         src="/pixiv_logo.svg"
